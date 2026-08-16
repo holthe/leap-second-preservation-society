@@ -1,0 +1,8 @@
+# The record is public. Crawl it while it is still 37 seconds long.
+# No Crawl-delay is specified. The Society is in favour of extra seconds,
+# wherever they are spent.
+
+User-agent: *
+Allow: /
+
+# There is no sitemap. There is one page, and after 2035 there may be less.
