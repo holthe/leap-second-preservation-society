@@ -6,37 +6,38 @@
 <title>The Leap Second Preservation Society · Page discontinued</title>
 <meta name="description" content="This page has been discontinued by international resolution.">
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#1e3d2f">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   :root{
-    --green:#1e3d2f; --green-deep:#142b21; --cream:#f7f3e8; --paper:#fffdf6;
-    --gold:#a9822f; --ink:#2b2b26; --muted:#6b6a5e; --line:#ddd6c3;
+    --bg:#ffffff; --ink:#101214; --muted:#5c6166; --panel:#f5f5f2;
+    --hot:#e8420b; --hot-dk:#c33206; --line:#e3e3de;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
-  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
-  .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
-  a{color:var(--green)}
-  a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  body{background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--hot);font-weight:800}
+  a{color:var(--hot)}
+  a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 
-  header{background:var(--green);color:var(--cream);text-align:center;padding:40px 0 34px;border-bottom:6px double var(--gold)}
-  header .est{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#c9bd93}
-  header h1{font-size:clamp(26px,5.4vw,44px);font-weight:400;font-style:italic;margin:10px 0 6px}
-  header h1 a{color:var(--cream);text-decoration:none}
-  header .motto{font-size:15px;color:#d9d2b8}
+  header{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+  header .est{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  header h1{font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+  header h1 a{color:var(--ink);text-decoration:none}
+  header .motto{font-size:14px;color:var(--muted)}
 
-  main{flex:1;background:var(--paper);border-bottom:1px solid var(--line);text-align:center;padding:52px 0 56px}
-  .n{font-size:clamp(90px,22vw,170px);line-height:.9;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .cap{max-width:480px;margin:18px auto 0;font-size:19px}
-  .sub{max-width:480px;margin:14px auto 0;color:var(--muted);font-style:italic}
-  .src{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:20px}
-  .btn{display:inline-block;font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;background:var(--green);color:var(--cream);text-decoration:none;padding:13px 26px;margin-top:26px}
-  .btn:hover{background:#2a5240}
+  main{flex:1;padding:64px 0 60px}
+  .n{font-size:clamp(120px,26vw,240px);font-weight:800;letter-spacing:-.05em;line-height:.85}
+  .n:after{content:".";color:var(--hot)}
+  .cap{max-width:520px;margin:22px 0 0;font-size:20px;font-weight:600;line-height:1.35}
+  .sub{max-width:520px;margin:12px 0 0;color:var(--muted);font-size:15px}
+  .src{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:16px}
+  .btn{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--hot);color:#fff;text-decoration:none;padding:15px 28px;margin-top:28px;border-radius:3px}
+  .btn:hover{background:var(--hot-dk)}
 
-  footer{padding:28px 0 40px;font-size:12.5px;color:var(--muted);text-align:center}
+  footer{padding:24px 0 40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -56,6 +57,7 @@
     <p class="cap">This page has been discontinued by international resolution. The Society fought its removal. The Society lost, as usual.</p>
     <p class="sub">If you believe the page still exists, you may petition for its reinsertion. Petitions are counted, totalled, and presented to no one.</p>
     <div class="src">No adjustment will be inserted · IERS Bulletin C was not consulted</div>
+    <br>
     <a class="btn" href="/">Return to the Society</a>
   </div>
 </main>

@@ -64,8 +64,11 @@ robots.txt            permissive
 wrangler.toml         Cloudflare Pages configuration
 ```
 
-The page makes zero requests to any external domain. Type is Georgia with a
-Times New Roman fallback, so there are no webfonts to host or wait for.
+The page makes zero requests to any external domain. Type is Helvetica Neue
+with Arial and generic sans fallbacks, so there are no webfonts to host or
+wait for. The design is a conservation-campaign poster: white ground, heavy
+grotesk headings, and a single hot orange spent on the endangerment notice,
+the calls to action, and the full stop after the 37.
 
 ### The production domain
 
@@ -106,26 +109,15 @@ make favicon        # favicon.ico + apple-touch-icon.png <- the SVG sources
 make logo           # assets/logo.svg <- tools/logo-src.svg, text outlined
 ```
 
-One caveat, load-bearing: the site's face is Georgia, which is not on this
-machine's fontconfig path, and the fallback (Noto Serif) is close but not
-it. The committed `og.png`, `assets/logo.svg` and `favicon.svg` were
-produced with the variable TTFs of
-[Gelasio](https://github.com/google/fonts/tree/main/ofl/gelasio), Google's
-metric-compatible Georgia, downloaded to a scratch directory and exposed
-through a scoped `FONTCONFIG_FILE` that maps the family name Georgia to
-Gelasio for the duration of the render:
-
-```sh
-FONTCONFIG_FILE=/path/to/fonts.conf make og logo
-```
-
-Nothing was installed system-wide, and the TTFs are not committed. `make
-favicon` needs no fonts at all; the text in `favicon.svg` and
-`tools/favicon-16.svg` is already paths and pixels.
+No font gymnastics are required: the campaign face is the Helvetica/Arial
+stack, which resolves on this machine to Liberation Sans, metric-compatible
+with what most non-Apple visitors see in the browser. `make favicon` needs
+no fonts at all; the text in `favicon.svg` and `tools/favicon-16.svg` is
+already paths and pixels.
 
 `make logo` outlines the wordmark's text so the README renders the same
-whether or not the viewer has Georgia. Inkscape rewrites the whole file, so
-the `GENERATED` comment at the top has to be pasted back afterwards.
+regardless of the viewer's fonts. Inkscape rewrites the whole file, so the
+`GENERATED` comment at the top has to be pasted back afterwards.
 
 ### Deploying
 
@@ -218,5 +210,4 @@ directly above the table.
 Parody. The Society is not a registered charity, horological authority, or
 going concern, and holds no rights over any second, past or future. The
 facts about TAI, UTC, the IERS and the 2022 CGPM resolution are, regrettably,
-accurate. Gelasio is licensed under the SIL Open Font License 1.1; only
-outlined glyphs and rendered images of it are committed here.
+accurate.

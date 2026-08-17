@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <!--
   Source for /og.png (1200x630). Rendered by `make og`.
-  Edit the copy here, not the PNG. The tagline and the domain in the footer
-  are duplicated from index.html; nothing links them. Regenerate after any
-  change to either, and after the real domain replaces the placeholder.
-
-  The render resolves Georgia through fontconfig. On this machine that means
-  a scoped FONTCONFIG_FILE pointing at Gelasio (metric-compatible Georgia);
-  see the README. Without it you get Noto Serif, which is close but not it.
+  Edit the copy here, not the PNG. Regenerate after any tagline change.
+  The domain in the footer is the production-domain placeholder; if the
+  site lands somewhere other than leapsecondsociety.org, change it here too.
 -->
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <style>
-  :root{
-    --green:#1e3d2f; --cream:#f7f3e8; --paper:#fffdf6;
-    --gold:#a9822f; --muted:#6b6a5e;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: #ffffff;
+    color: #101214;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex; flex-direction: column;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:1200px;height:630px;overflow:hidden}
-  body{background:var(--cream);font-family:Georgia,"Times New Roman",serif;display:flex;flex-direction:column}
-
-  header{background:var(--green);color:var(--cream);text-align:center;padding:34px 0 28px;border-bottom:6px double var(--gold)}
-  header .est{font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#c9bd93}
-  header h1{font-size:46px;font-weight:400;font-style:italic;margin-top:10px}
-
-  main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-  .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
-  /* Georgia's old-style 3 and 7 descend below the baseline; the margin
-     keeps them out of the tagline. */
-  .n{font-size:225px;line-height:.85;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .tag{font-size:31px;font-style:italic;color:var(--muted);margin-top:56px}
-
-  footer{font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:center;padding-bottom:30px}
+  .mid {
+    flex: 1;
+    padding: 0 76px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .eyebrow {
+    font-size: 19px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #e8420b; font-weight: 800;
+  }
+  .n {
+    font-size: 300px; font-weight: 800; letter-spacing: -0.05em; line-height: .82;
+    margin: 10px 0 6px;
+  }
+  .n span { color: #e8420b; }
+  .name {
+    font-size: 44px; font-weight: 800; letter-spacing: -0.02em; margin-top: 18px;
+  }
+  .tag { font-size: 22px; color: #5c6166; margin-top: 8px; }
+  .foot {
+    flex: none;
+    padding: 0 76px 26px;
+    display: flex; justify-content: space-between;
+    font-size: 16px; color: #5c6166;
+    text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="est">Est. 1972 (retroactively)</div>
-  <h1>The Leap Second Preservation Society</h1>
-</header>
-<main>
-  <div class="eyebrow">The current offset · TAI minus UTC</div>
-  <div class="n">37</div>
-  <div class="tag">37 seconds of heritage. 9 years to save them.</div>
-</main>
-<footer>leapsecondsociety.org</footer>
+  <div class="mid">
+    <div class="eyebrow">Only 37 remain &middot; None inserted since 2016</div>
+    <div class="n">37<span>.</span></div>
+    <div class="name">The Leap Second Preservation Society</div>
+    <p class="tag">Because the Earth cannot keep time, and should not have to.</p>
+  </div>
+  <div class="foot">
+    <span>DOC: BEI-007</span>
+    <span>LEAPSECONDSOCIETY.ORG</span>
+    <span>One second may be added without notice</span>
+  </div>
 </body>
 </html>

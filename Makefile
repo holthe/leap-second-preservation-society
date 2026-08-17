@@ -27,12 +27,12 @@ og: ## Re-render og.png from tools/og.html
 
 .PHONY: favicon
 favicon: ## Re-render favicon.ico and apple-touch-icon.png from the SVG sources
-	$(MAGICK) -background "#f7f3e8" favicon.svg -resize 180x180 \
+	$(MAGICK) -background "#ffffff" favicon.svg -resize 180x180 \
 		-alpha off -colorspace sRGB -type TrueColor -strip apple-touch-icon.png
 	$(MAGICK) \
-		\( -background "#f7f3e8" favicon.svg -resize 48x48 \) \
-		\( -background "#f7f3e8" favicon.svg -resize 32x32 \) \
-		\( -background "#f7f3e8" tools/favicon-16.svg -resize 16x16 \) \
+		\( -background "#ffffff" favicon.svg -resize 48x48 \) \
+		\( -background "#ffffff" favicon.svg -resize 32x32 \) \
+		\( -background "#ffffff" tools/favicon-16.svg -resize 16x16 \) \
 		-alpha off -colorspace sRGB -strip favicon.ico
 	@echo "wrote apple-touch-icon.png favicon.ico"
 
