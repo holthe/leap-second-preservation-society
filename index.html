@@ -40,19 +40,26 @@
     --gold:#a9822f; --ink:#2b2b26; --muted:#6b6a5e; --line:#ddd6c3;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+  body{color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65;
+    background:var(--cream) repeating-linear-gradient(180deg,transparent 0 25px,rgba(43,43,38,.028) 25px 26px)}
   .wrap{max-width:860px;margin:0 auto;padding:0 22px}
   .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
   a{color:var(--green)}
   button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
-  header{background:var(--green);color:var(--cream);text-align:center;padding:40px 0 34px;border-bottom:6px double var(--gold)}
+  header{background:var(--green);color:var(--cream);text-align:center;padding:44px 0 36px;border-bottom:6px double var(--gold)}
+  .emblem{width:92px;height:92px;margin:0 auto 14px;display:block}
   header .est{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#c9bd93}
   header h1{font-size:clamp(26px,5.4vw,44px);font-weight:400;font-style:italic;margin:10px 0 6px}
   header .motto{font-size:15px;color:#d9d2b8}
 
   .hero37{background:var(--paper);border-bottom:1px solid var(--line);text-align:center;padding:52px 0 46px}
-  .hero37 .n{font-size:clamp(90px,22vw,170px);line-height:.9;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .hero37 .n{font-size:clamp(90px,22vw,170px);line-height:.9;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+    text-shadow:0 1px 0 #fff,0 -1px 0 rgba(0,0,0,.18)}
+  .orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 0}
+  .orn i{display:block;height:1px;width:110px;background:linear-gradient(90deg,transparent,rgba(169,130,47,.6))}
+  .orn i+i{background:linear-gradient(90deg,rgba(169,130,47,.6),transparent)}
+  .orn b{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
   .hero37 .cap{max-width:460px;margin:14px auto 0;color:var(--muted);font-style:italic}
   .hero37 .src{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:16px}
 
@@ -62,12 +69,13 @@
 
   section{padding:48px 0;border-bottom:1px solid var(--line)}
   section h2{font-size:28px;font-weight:400;margin:6px 0 10px}
+  section h2:after{content:"";display:block;width:52px;height:1px;background:var(--gold);margin-top:10px}
   section p.intro{color:var(--muted);max-width:620px}
 
-  .petition{margin-top:22px;background:var(--paper);border:1px solid var(--line);padding:26px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .petition{margin-top:26px;background:var(--paper);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:4px;padding:26px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
   .petition .count b{display:block;font-size:44px;color:var(--green);font-variant-numeric:tabular-nums;line-height:1}
   .petition .count span{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .btn{font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;background:var(--green);color:var(--cream);border:0;padding:13px 26px;cursor:pointer}
+  .btn{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--green);color:var(--cream);border:1px solid var(--green-deep);padding:13px 26px;cursor:pointer}
   .btn:hover{background:#2a5240}
   .petition .note{flex-basis:100%;font-size:13px;color:var(--muted);font-style:italic;min-height:1.4em}
 
@@ -78,8 +86,19 @@
   td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   .scrolltbl{max-height:380px;overflow:auto;border:1px solid var(--line);margin-top:22px}
   .scrolltbl table{margin-top:0;border:0}
+  @media (max-width:640px){
+    .scrolltbl thead{display:none}
+    .scrolltbl table,.scrolltbl tbody{display:block}
+    .scrolltbl tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;
+      border-bottom:1px solid var(--line);padding:10px 12px}
+    .scrolltbl tr:last-child{border-bottom:none}
+    .scrolltbl td{display:block;border-bottom:none;padding:0}
+    .scrolltbl td:first-child:before{content:"No. "}
+    .scrolltbl td:first-child{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .scrolltbl td:last-child{flex-basis:100%;margin-top:3px;color:var(--muted);font-size:13px}
+  }
 
-  .adopt{margin-top:22px;background:var(--paper);border:1px solid var(--line);padding:26px}
+  .adopt{margin-top:26px;background:var(--paper);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:4px;padding:26px}
   .adopt label{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:block;margin:14px 0 6px;color:var(--muted)}
   .adopt select,.adopt input{font-family:Georgia,serif;font-size:16px;padding:10px 12px;border:1px solid var(--line);background:#fff;width:100%;max-width:420px}
   .adopt .btn{margin-top:18px}
@@ -94,7 +113,8 @@
   .cert .no{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px;letter-spacing:.18em;color:var(--muted);margin-top:14px;text-transform:uppercase}
 
   .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
-  .tier{background:var(--paper);border:1px solid var(--line);padding:22px}
+  .tier{background:var(--paper);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:3px;padding:22px;margin:4px}
+  .tier:last-child{border-color:var(--gold);outline-color:var(--gold)}
   .tier h3{font-style:italic;font-weight:400;font-size:20px;color:var(--green)}
   .tier .price{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;color:var(--gold);margin:6px 0 10px}
   .tier ul{list-style:none;font-size:14px;color:var(--muted)}
@@ -110,6 +130,24 @@
 
 <header>
   <div class="wrap">
+    <svg class="emblem" viewBox="0 0 96 96" role="img" aria-label="Society emblem: a clock face standing at 23:59:60">
+      <circle cx="48" cy="48" r="45" fill="none" stroke="var(--gold)" stroke-width="1.6"/>
+      <circle cx="48" cy="48" r="41.5" fill="none" stroke="var(--gold)" stroke-width="0.8"/>
+      <circle cx="48" cy="48" r="33" fill="#f7f3e8"/>
+      <g stroke="#1e3d2f" stroke-width="1.6">
+        <line x1="48" y1="17" x2="48" y2="22"/><line x1="48" y1="74" x2="48" y2="79"/>
+        <line x1="17" y1="48" x2="22" y2="48"/><line x1="74" y1="48" x2="79" y2="48"/>
+        <line x1="26" y1="26" x2="29.5" y2="29.5"/><line x1="70" y1="26" x2="66.5" y2="29.5"/>
+        <line x1="26" y1="70" x2="29.5" y2="66.5"/><line x1="70" y1="70" x2="66.5" y2="66.5"/>
+      </g>
+      <g stroke="#1e3d2f" stroke-linecap="round">
+        <line x1="48" y1="48" x2="48" y2="26" stroke-width="2.6"/>
+        <line x1="48" y1="48" x2="44" y2="30" stroke-width="3.2"/>
+      </g>
+      <circle cx="48" cy="48" r="2.6" fill="#1e3d2f"/>
+      <path d="M48 60 l3 5 h-6 z" fill="#a9822f"/>
+      <text x="48" y="71" text-anchor="middle" font-family="Georgia,serif" font-size="8.5" fill="#1e3d2f">:60</text>
+    </svg>
     <div class="est">Est. 1972 (retroactively) · A heritage trust for endangered seconds</div>
     <h1>The Leap Second Preservation Society</h1>
     <div class="motto">Because the Earth cannot keep time, and should not have to.</div>
@@ -119,7 +157,9 @@
 <div class="hero37">
   <div class="wrap">
     <div class="eyebrow">The current offset · TAI minus UTC</div>
+    <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
     <div class="n">37</div>
+    <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
     <p class="cap">Thirty-seven seconds stand between atomic time and the slowing rotation of the Earth. Each one was inserted by hand. Each one is irreplaceable.</p>
     <div class="src">Source: IERS Bulletin C · Last audited by the Society, informally, from memory</div>
   </div>
