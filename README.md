@@ -72,9 +72,12 @@ the calls to action, and the full stop after the 37.
 
 ### The production domain
 
-`leapsecondsociety.org` is a placeholder until the domain is actually
-purchased. It is hardcoded, deliberately, in three files, and nothing
-derives it from anything else:
+The site is served at `leapsecondsociety.pages.dev`, and that is the host every absolute
+URL on the page points at, so link previews resolve. `leapsecondsociety.org` remains
+the candidate domain and has not been purchased; if the site is
+promoted, either to that domain or to a subdomain of the parent
+(`leapsecond.besteffortindustries.com`), the canonical host changes in the
+places below and nothing else derives it:
 
 | File | What to change |
 | --- | --- |
