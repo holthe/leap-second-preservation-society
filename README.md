@@ -72,7 +72,7 @@ the calls to action, and the full stop after the 37.
 
 ### The production domain
 
-The site is served at `leapsecondsociety.pages.dev`, and that is the host every absolute
+The site is served at `leapsecond.besteffortindustries.com`, and that is the host every absolute
 URL on the page points at, so link previews resolve. `leapsecondsociety.org` remains
 the candidate domain and has not been purchased; if the site is
 promoted, either to that domain or to a subdomain of the parent
@@ -191,13 +191,13 @@ does too, then:
 3. **Attach the domain to the Pages project.** Dashboard, **Workers &
    Pages**, `leapsecondsociety`, **Custom domains**, **Set up a custom
    domain**, `leapsecondsociety.org`. Because the zone is on Cloudflare, the
-   proxied CNAME at `@` pointing to `leapsecondsociety.pages.dev` is created
+   proxied CNAME at `@` pointing to `leapsecond.besteffortindustries.com` is created
    for you. **Do not create the record by hand first**; a pre-existing CNAME
    blocks the flow outright.
 4. **Repeat for `www`** if both should resolve.
 5. **Wait for the certificate.** Usually a few minutes.
 
-Until then the site is reachable at `leapsecondsociety.pages.dev`. Then
+Until then the site is reachable at `leapsecond.besteffortindustries.com`. Then
 update the placeholder domain everywhere the table above says to.
 
 ### Related
