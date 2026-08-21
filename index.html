@@ -37,13 +37,13 @@
 <style>
   :root{
     --bg:#ffffff; --ink:#101214; --muted:#5c6166; --panel:#f5f5f2;
-    --hot:#e8420b; --hot-dk:#c33206; --line:#e3e3de;
+    --hot:#e8420b; --hot-dk:#c33206; --hot-ink:#b52c04; --line:#e3e3de;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.5}
   .wrap{max-width:980px;margin:0 auto;padding:0 24px}
-  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--hot);font-weight:800}
-  a{color:var(--hot)}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--hot-ink);font-weight:800}
+  a{color:var(--hot-ink)}
   button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 
   header{padding:26px 0 22px;border-bottom:1px solid var(--line)}
@@ -58,7 +58,7 @@
   .hero37 .cap{max-width:520px;margin:22px 0 0;color:var(--ink);font-size:20px;font-weight:600;line-height:1.35}
   .hero37 .src{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 
-  .urgent{background:var(--hot);color:#fff;padding:40px 0}
+  .urgent{background:var(--hot-dk);color:#fff;padding:40px 0}
   .urgent .eyebrow{color:#ffd9c9}
   .urgent h2{font-size:clamp(22px,3.6vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
   .urgent p{max-width:680px;color:#ffe6dc;font-size:15px}
@@ -70,7 +70,7 @@
   .petition{margin-top:24px;background:var(--panel);padding:28px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;border-radius:4px}
   .petition .count b{display:block;font-size:52px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
   .petition .count span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .btn{font-family:inherit;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--hot);color:#fff;border:0;padding:15px 28px;cursor:pointer;border-radius:3px}
+  .btn{font-family:inherit;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--hot-dk);color:#fff;border:0;padding:15px 28px;cursor:pointer;border-radius:3px}
   .btn:hover{background:var(--hot-dk)}
   .petition .note{flex-basis:100%;font-size:13px;color:var(--muted);min-height:1.4em}
 
@@ -133,7 +133,7 @@
   <div class="wrap">
     <div class="eyebrow">The current offset · TAI minus UTC</div>
     <div class="n">37</div>
-    <p class="cap">Thirty-seven seconds stand between atomic time and the slowing rotation of the Earth. Each one was inserted by hand. Each one is irreplaceable.</p>
+    <p class="cap">Thirty-seven seconds stand between atomic time and the slowing rotation of the Earth. Ten of them were there from the beginning, handed over when UTC started in 1972. The other twenty-seven were inserted one at a time, by decision, and each one is irreplaceable.</p>
     <div class="src">Source: IERS Bulletin C · Last audited by the Society, informally, from memory</div>
   </div>
 </div>
@@ -141,8 +141,8 @@
 <div class="urgent">
   <div class="wrap">
     <div class="eyebrow">Notice of endangerment</div>
-    <h2>The leap second is to be abolished.</h2>
-    <p>In November 2022, the General Conference on Weights and Measures resolved to discontinue the leap second by 2035 or earlier. This is real. After more than fifty years of service, the practice of politely asking every computer on Earth to experience 23:59:60 will end, primarily because every computer on Earth handled it badly. The Society considers this a failure of computers, not of seconds.</p>
+    <h2>The leap second is to be discontinued.</h2>
+    <p>In November 2022, the General Conference on Weights and Measures resolved to raise the permitted difference between UT1 and UTC, in or before 2035, which stops leap seconds being inserted at all. The mechanism goes to the conference in 2026. This is real. After more than fifty years of service, the practice of politely asking every computer on Earth to experience 23:59:60 will end, primarily because every computer on Earth handled it badly. The Society considers this a failure of computers, not of seconds.</p>
   </div>
 </div>
 
@@ -154,7 +154,7 @@
     <div class="petition">
       <div class="count"><b id="sigCount">23,595,960</b><span>Signatures (unaudited)</span></div>
       <button class="btn" id="signBtn">Sign the petition</button>
-      <div class="note" id="signNote"></div>
+      <div class="note" id="signNote" role="status"></div>
     </div>
   </div>
 </section>
@@ -193,7 +193,7 @@
       <div class="holder" id="certName">-</div>
       <div>has adopted, in perpetuity and without consequence,</div>
       <div class="sec" id="certSec">-</div>
-      <p class="fine">The adopted second occurred once, lasted one second, and will not occur again. The Society thanks you for your support during its brief but confusing lifetime. This certificate confers no rights over the second, its earlier neighbours, or time in general.</p>
+      <p class="fine">That dated second occurred once, lasted one second, and will not occur again. The Society thanks you for your support during its brief but confusing lifetime. This certificate confers no rights over the second, its earlier neighbours, or time in general.</p>
       <div class="no" id="certNo">Deed No. -</div>
     </div>
   </div>
