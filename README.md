@@ -202,7 +202,7 @@ update the placeholder domain everywhere the table above says to.
 
 ### Related
 
-The site's footer files itself as document BEI-007 of
+The site's footer files itself as document BEI-LSPS of
 [Best Effort Industries](https://besteffortindustries.com), whose divisions
 table does not yet have a row for the Society. Adding one is a manual edit
 to that repository's `index.html`; the procedure is in an HTML comment
